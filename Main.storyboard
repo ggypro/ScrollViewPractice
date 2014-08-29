@@ -15,15 +15,15 @@
                         <sections>
                             <tableViewSection id="A9m-v2-OE8">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="yKF-cs-mzh" style="IBUITableViewCellStyleDefault" id="mMW-Dl-40P">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="yKF-cs-mzh" style="IBUITableViewCellStyleDefault" id="mMW-Dl-40P">
                                         <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mMW-Dl-40P" id="S6D-ql-CMs">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Image Scroll" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yKF-cs-mzh">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -32,7 +32,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="xP1-uN-Ddp" kind="push" id="cXg-Ve-k24"/>
+                                            <segue destination="PuB-CF-BBl" kind="push" id="JJh-67-589"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="boi-Zg-Eu3" style="IBUITableViewCellStyleDefault" id="FsL-wX-gpi">
@@ -101,35 +101,35 @@
             <point key="canvasLocation" x="58" y="-538"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="oue-Sc-ABL">
+        <scene sceneID="MlY-aZ-GIW">
             <objects>
-                <viewController id="xP1-uN-Ddp" customClass="SCVViewController" sceneMemberID="viewController">
+                <viewController id="PuB-CF-BBl" customClass="SCVViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ERr-YU-F8D"/>
-                        <viewControllerLayoutGuide type="bottom" id="Xfr-6a-b2X"/>
+                        <viewControllerLayoutGuide type="top" id="tdf-NM-XZ4"/>
+                        <viewControllerLayoutGuide type="bottom" id="mUh-TX-34A"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="AF3-zm-ArE">
+                    <view key="view" contentMode="scaleToFill" id="g8H-jK-6lr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KEw-zR-GGt">
-                                <rect key="frame" x="-21" y="-35" width="13" height="2"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dce-sY-Q72">
+                                <rect key="frame" x="0.0" y="65" width="320" height="495"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </scrollView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i9e-bv-8ZW">
-                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <outlet property="delegate" destination="AF3-zm-ArE" id="2PX-Sj-asE"/>
+                                    <outlet property="delegate" destination="PuB-CF-BBl" id="QVP-GU-ZCm"/>
                                 </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="5zL-cD-yoB"/>
+                    <connections>
+                        <outlet property="scrollView" destination="Dce-sY-Q72" id="6rQ-tc-uPw"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IdN-j9-NaB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gmR-ii-uhy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="589" y="-1093"/>
+            <point key="canvasLocation" x="604" y="-1055"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NJb-Bp-IgF">

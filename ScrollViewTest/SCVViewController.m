@@ -36,6 +36,10 @@
 
 -(void)scrollViewTwoFingerTapped:(UITapGestureRecognizer *)recognizer{
     CGFloat newZoomScale = _scrollView.zoomScale / 1.5f;
+    newZoomScale = MAX(newZoomScale, self.scrollView.minimumZoomScale);
+    [_scrollView setZoomScale:newZoomScale animated:YES];
+    
+    NSLog(@"TWO FINGER TAPPED");
 }
 
 -(void)scrollViewDoubleTapped:(UITapGestureRecognizer *)recognizer{
@@ -54,6 +58,7 @@
     CGRect rectToZoomTo = CGRectMake(x,y,w,h);
     
     [_scrollView zoomToRect:rectToZoomTo animated:YES];
+    NSLog(@"Double TAPPED");
 }
 
 -(void)centerScrollViewContents{
@@ -73,13 +78,24 @@
     }
     
     _imageView.frame = contentsFrame;
+    NSLog(@"CENTER SCROLL VIEW ");
+}
+
+//DELEGATE FUNCTION CALL
+-(UIView*)viewForZoomingInScrollView:(UIScrollView *)scrollView{
+    return _imageView;
+}
+
+// ZOOM CALL
+-(void)scrollViewDidZoom:(UIScrollView *)scrollView{
+    [self centerScrollViewContents];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+//    _scrollView.delegate = self;
     
     UIImage *image = [UIImage imageNamed:@"photo1.png"];
     _imageView = [[UIImageView alloc]initWithImage:image];
